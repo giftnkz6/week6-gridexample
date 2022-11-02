@@ -1,0 +1,46 @@
+/* Universal styling */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* header and footer */
+header,footer{
+    background-color: tomato;
+
+}
+
+main{
+    background-color: tan;
+}
+
+/* Layout */
+body{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr 100px;
+    min-height: 100vh;
+}
+header, main, footer{
+    grid-column: 1/-1;
+    min-width: 100vw;
+}
+img{
+    width: 50rem;
+}
+.container{
+    display: flex;
+}
+@media screen and (max-width: 900px) {
+    .container img{
+        width: 100%;
+    }
+    .container{
+        flex-direction: column;
+    }
+
+    
+}
